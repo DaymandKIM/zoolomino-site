@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zoolomino — 동물 블록 퍼즐</title>
-<meta name="description" content="동물 블록을 맞춰 줄을 지우고 도감을 채우는 퍼즐 게임">
+<title>Zoolomino — Support</title>
+<meta name="description" content="Support page for Zoolomino, an animal block puzzle by DAYLONG STUDIO.">
+<!-- 이 페이지는 App Store·Play 의 Support URL 로 들어간다. 심사자가 실제로
+     연다. 앱의 기본 언어가 영어이므로 영어가 먼저고, 한국어를 아래에 둔다.
+     방침은 여기 두지 않는다 — daylongs 한 곳뿐이다. -->
 <style>
-  :root { --ink:#4A3F33; --sub:#6E6152; --faint:#A79781; --bg:#EEE9DF; --green:#7FB04A; }
+  :root { --ink:#4A3F33; --sub:#6E6152; --faint:#A79781; --bg:#EEE9DF; --green:#7FB04A; --line:#DFD5C3; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--sub); line-height:1.7;
     font-family:ui-rounded,'Apple SD Gothic Neo','Noto Sans KR',system-ui,sans-serif; }
@@ -23,7 +26,23 @@
   .links { display:flex; gap:12px; flex-wrap:wrap; margin-top:36px; }
   .btn { background:#E2D8C6; color:var(--sub); padding:12px 20px; border-radius:12px;
     text-decoration:none; font-size:14px; font-weight:800; }
-  footer { margin-top:56px; font-size:12px; color:var(--faint); border-top:1px solid rgba(120,96,66,.16);
+  .card { background:#F6F1E6; border-radius:16px; padding:18px 20px; margin:26px 0 0; font-size:14.5px; }
+  .card dl { margin:0; display:grid; grid-template-columns:auto 1fr; gap:6px 16px; }
+  .card dt { color:var(--faint); white-space:nowrap; }
+  /* min-width:0 이 없으면 격자 칸이 내용보다 작아지지 못한다. "Business reg. no."
+     가 nowrap 이라 첫 칸이 넓어지고, 남은 1fr 이 이메일 주소보다 좁아지면서
+     390 폭에서 오른쪽으로 10px 넘쳤다. */
+  .card dd { margin:0; color:var(--ink); min-width:0; overflow-wrap:anywhere; }
+  /* 좁은 화면에서는 두 칸을 포기하고 위아래로 쌓는다. 붙여 놓는 것보다
+     읽기도 낫다. */
+  @media (max-width:430px) {
+    .card dl { grid-template-columns:1fr; gap:0; }
+    .card dt { margin-top:10px; }
+    .card dt:first-child { margin-top:0; }
+  }
+  .ko { margin-top:48px; padding-top:28px; border-top:1px solid var(--line); }
+  .ko h2 { margin-top:0; }
+  footer { margin-top:48px; font-size:12px; color:var(--faint); border-top:1px solid var(--line);
     padding-top:20px; }
 </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -32,33 +51,61 @@
 <body>
 <div class="wrap">
   <div class="eyebrow">ZOOLOMINO</div>
-  <h1>주로미노</h1>
-  <div class="tag">동물 블록 퍼즐</div>
+  <h1>Zoolomino</h1>
+  <div class="tag">Animal Block Puzzle</div>
 
   <div class="tray">
-    나무 트레이 위에 동물 블록을 놓아 가로세로 줄을 채우세요.
-    줄이 완성되면 거기 걸린 동물들이 폴짝 뛰어 탈출합니다.
-    블록은 회전할 수 없어서 매 수가 선택입니다.
+    Drop animal blocks onto the wooden tray and fill a row or column.
+    When a line completes, every animal caught in it leaps free.
+    Blocks never rotate, so each piece is a real decision.
   </div>
 
-  <h2>특징</h2>
+  <h2>Features</h2>
   <ul>
-    <li>저마다 다른 모양의 동물들, 만난 동물은 도감에 기록</li>
-    <li>콤보를 이어가면 점수가 크게 상승</li>
-    <li>배너·전면광고 없음 — 원할 때 보는 보상형 광고만</li>
-    <li>오프라인 플레이 · 계정 없음 · 40개 언어 지원</li>
+    <li>Every animal has its own shape, and every rescue is recorded in your collection</li>
+    <li>Combos multiply your score</li>
+    <li>No banners, no interstitials — rewarded ads only, and only if you choose</li>
+    <li>Plays offline · No account · 40 languages</li>
   </ul>
 
-  <h2>문의</h2>
-  <p>버그 제보나 건의사항은 <a href="mailto:whaqlemfhs12@gmail.com">whaqlemfhs12@gmail.com</a>으로 보내주세요.
-     기기 종류와 앱 버전을 함께 적어주시면 확인이 빠릅니다.</p>
+  <h2>Support</h2>
+  <p>Found a bug, or want to suggest something? Email
+     <a href="mailto:whaqlemfhs12@gmail.com">whaqlemfhs12@gmail.com</a>.
+     Please include your device model and the app version — you'll find the version
+     at the bottom of the in-app Settings screen. That makes it much faster to look into.</p>
+  <p>We read every message and normally reply within a couple of days.</p>
+
+  <h2>Your data</h2>
+  <p>Zoolomino collects no personal data. Your best score and collection stay on your
+     device. See the
+     <a href="https://daylongs.com/policies/zoolomino/privacy">Privacy Policy</a>
+     for the details, including how ads work.</p>
 
   <div class="links">
-    <a class="btn" href="./privacy.html">개인정보처리방침</a>
-    <a class="btn" href="mailto:whaqlemfhs12@gmail.com">문의하기</a>
+    <a class="btn" href="https://daylongs.com/policies/zoolomino/privacy">Privacy Policy</a>
+    <a class="btn" href="mailto:whaqlemfhs12@gmail.com">Contact us</a>
   </div>
 
-  <footer>© 2026 Zoolomino</footer>
+  <div class="card">
+    <dl>
+      <dt>Business name</dt><dd>DAYLONG STUDIO (데이롱 스튜디오)</dd>
+      <dt>Representative</dt><dd>Kim Daeyong</dd>
+      <dt>Business reg. no.</dt><dd>391-03-04072</dd>
+      <dt>Email</dt><dd><a href="mailto:whaqlemfhs12@gmail.com">whaqlemfhs12@gmail.com</a></dd>
+    </dl>
+  </div>
+
+  <div class="ko">
+    <h2>문의 (한국어)</h2>
+    <p>버그 제보나 건의사항은 <a href="mailto:whaqlemfhs12@gmail.com">whaqlemfhs12@gmail.com</a>으로
+       보내주세요. 기기 종류와 앱 버전을 함께 적어주시면 확인이 빠릅니다 —
+       버전은 앱 안 <b>설정</b> 화면 맨 아래에 있습니다.</p>
+    <p>개인정보처리방침은
+       <a href="https://daylongs.com/policies/zoolomino/privacy">여기</a>에 있습니다.
+       주로미노는 개인정보를 수집하지 않고, 최고 점수와 도감은 기기에만 저장됩니다.</p>
+  </div>
+
+  <footer>© 2026 DAYLONG STUDIO (데이롱 스튜디오) · Rep. Kim Daeyong · Business reg. no. 391-03-04072</footer>
 </div>
 </body>
 </html>
